@@ -1,0 +1,604 @@
+/* basic design */
+@font-face {
+  font-family:kamik;
+  src: url(KAMIKZOM.ttf);
+}
+
+:root {
+  --Wshadow:5px 5px 5px white;
+  --Gshadow:5px 5px 5px gray;
+}
+
+body {
+  font-family:kamik;
+  margin:0;
+}
+
+a:link {
+  color:white;
+  text-decoration: none;
+}
+
+a:hover {
+  color:gray;
+  text-decoration: underline;
+}
+
+a:visited {
+  color:white;
+  text-decoration:none;
+}
+
+a:active {
+  color:gray;
+  text-decoration: underline;
+}
+
+.menu {
+  font-size: 1.5rem;
+  background-color: black;
+  margin:0;
+}
+
+.menu-list {
+  border: 0.5rem solid black;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align:center;
+  padding: 1rem 1.2rem 1rem 1.2rem;
+  margin:0;
+}
+
+.fixed-logo {
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 4fr;
+}
+
+.logo {
+  grid-column: 3/4;
+  grid-row: 1/5;
+}
+
+.sns {
+  padding: 1rem;
+  grid-column: 5/6;
+  grid-row:4/5;
+  height: 3rem;
+  display:flex;
+  justify-content: center;
+}
+
+#logo-pic {
+  width: 20rem;
+}
+
+footer {
+  padding: 0.5rem;
+  color:white;
+  font-size: 1rem;
+  font-weight: lighter;
+  border: 1px solid black;
+  background-color: black;
+}
+
+footer a:link {
+  color: skyblue;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color:skyblue;
+  text-decoration:underline;
+}
+
+footer a:visited {
+  color: skyblue;
+  text-decoration: none;
+}
+
+footer a:active {
+  color:skyblue;
+  text-decoration: underline;
+}
+
+#goto_top {
+  position:fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+/* home design */
+/* hompage section1 */
+.home-1 {
+  background-image:url('concert.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin:0;
+}
+
+#slogan-1 {
+  font-size: 5rem;
+  padding: 3rem;
+  color: white;
+  text-shadow: var(--Gshadow);
+  margin:0;
+}
+/* homepage section2 */
+.home-2 {
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 2fr;
+  margin:0;
+}
+
+#calendar {
+  color:darkred;
+  font-size:2rem;
+  margin:1rem;
+  padding: 1rem;
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 7rem 3.5rem repeat(5, 6rem);
+  grid-column:1/4;
+  grid-row:1/3;
+  border: 0.1rem solid lightpink;
+  background-color: lightpink;
+}
+
+#calendar h1 {
+  grid-row: 1;
+  grid-column: 1/8;
+  text-align: center;
+  font-size: 2.5rem;
+  color:darkred;
+}
+
+#week {
+  grid-row: 2/3;
+  text-align: center;
+  border: 0.2rem solid darkred;
+  margin: 0.1rem;
+}
+
+#day {
+  grid-row:auto;
+  font-size: 1.5rem;
+  margin:0.1rem;
+  border: 0.2rem solid darkred;
+  padding: 0.2rem 0 0 0.2rem;
+}
+
+.busking {
+  color: green;
+}
+
+.busking p {
+  color:black;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  margin:0;
+}
+
+.stage {
+  color: red;
+}
+
+.stage p {
+  color:black;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  margin:0;
+}
+
+.artists{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
+  grid-column: 4/6;
+  grid-row:1/3;
+  border: 0.3rem solid lightpink;
+  margin: 1rem 1rem 1rem 0;
+  color:lightpink;
+}
+
+.artists h2 {
+  font-size: 2rem;
+  text-align:center;
+  margin-bottom:0;
+}
+
+#artist1 {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row:2;
+  grid-column:auto;
+  padding: 0 0 1rem 1rem;
+  font-family:sans-serif;
+}
+
+#artist2 {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  grid-row:3;
+  grid-column:auto:
+  border: 0.3rem solid lightpink;
+  padding: 0 0 1rem 1rem;
+  font-family:sans-serif;
+}
+/* homepage section3 */
+.home-3 {
+  background-image:url('mic.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin:0;
+  color:white;
+  font-family: sans-serif;
+  text-shadow: var(--Gshadow);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:1fr 1fr;
+}
+
+.home-3 h2 {
+  padding: 3rem 0 0 3rem;
+  font-size: 2rem;
+}
+
+.home-3 h1 {
+  padding: 0 3rem 0 3rem;
+  text-align: right;
+  font-size: 3rem;
+}
+
+.home-3 p {
+  padding: 0 0 3rem 3rem;
+  text-align: center;
+}
+
+/* homepage section4 */
+.home-4 {
+  background-image:url('event.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin:0 0 1rem 0;
+  text-align:left;
+  padding: 3.7rem 0 3.7rem 5rem;
+  font-size: 2rem;
+}
+
+.home-4 a:link {
+  color:black;
+  text-decoration: none;
+}
+
+.home-4 a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+.home-4 a:active {
+  color:gray;
+  text-decoration: underline;
+}
+
+.home-4 a:hover {
+  color:black;
+  text-decoration: underline;
+}
+
+/* access design */
+
+.access-page {
+  display:grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.company-menu {
+  font-size: 1.2rem;
+  margin:1.5rem;
+  text-shadow: var(--Gshadow);
+}
+
+.company-menu ul {
+  list-style: none;
+}
+
+.company-menu ul li {
+  padding: 0.2rem;
+}
+
+.company-menu ul li a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.company-menu ul li a:hover {
+  color:black;
+  text-decoration: underline;
+}
+
+.company-menu ul li a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+.company-menu ul li a:active {
+  color:black;
+  text-decoration: underline;
+}
+
+.access {
+  margin:2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+#map {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column:1/2;
+}
+
+#map-info p {
+  font-size: 1rem;
+  font-family: sans-serif;
+
+}
+
+#map-info {
+  grid-column: 2/3;
+  border: 0.3rem solid gray;
+  padding: 1rem;
+}
+
+#map-info h1{
+  color: gray;
+}
+
+/* company design */
+.company-page {
+  display:grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.company-logo-header{
+  text-align:center;
+  padding: 1rem;
+}
+
+.company-card section h1 {
+  font-size: 3rem;
+}
+
+#company-explanation {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+}
+
+
+/* review design */
+.board-page {
+  display:grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.board-menu {
+  font-size: 1.2rem;
+  margin:1.5rem;
+  text-shadow: var(--Gshadow);
+}
+
+.board-menu ul {
+  list-style: none;
+}
+
+.board-menu ul li {
+  padding: 0.2rem;
+}
+
+.board-menu ul li a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.board-menu ul li a:hover {
+  color:black;
+  text-decoration: underline;
+}
+
+.board-menu ul li a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+.board-menu ul li a:active {
+  color:black;
+  text-decoration: underline;
+}
+
+.review-card {
+  display: grid;
+  grid-gap:1rem;
+  margin: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+.review-explanation {
+  grid-column:1/5;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  border: 1px solid skyblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin:0.5rem;
+  background-color:skyblue;
+}
+
+.review-explanation nav img {
+  width: 21rem;
+}
+
+.review-explanation nav {
+  display: flex;
+  justify-content: center;
+}
+
+.review-explanation nav h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.review-card div {
+  margin: 0.5rem;
+  border: 0.2rem solid darkblue;
+  padding: 1rem;
+  color: darkblue;
+  border-radius: 0.5rem;
+}
+
+.review-posting section {
+  padding: 0.2rem;
+}
+
+#review-content {
+  width: auto;
+  height: 3rem;
+}
+
+#review-submit {
+  padding: 0.2rem;
+  background-color: skyblue;
+}
+
+.review p {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/* recommand design */
+.recommand-card {
+  display: grid;
+  grid-gap:1rem;
+  margin: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+.recommand{
+  margin: 0.5rem;
+  border: 0.2rem solid darkblue;
+  padding: 1rem;
+  color: darkblue;
+  border-radius: 0.5rem;
+}
+
+.recommand-card div{
+  margin: 0.5rem;
+  border: 0.2rem solid darkblue;
+  padding: 1rem;
+  color: darkblue;
+  border-radius: 0.5rem;
+}
+
+.recommand-explanation {
+  grid-column:1/5;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  border: 1px solid skyblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin:0.5rem;
+  background-color:skyblue;
+}
+
+.recommand-explanation nav img {
+  width: 8rem;
+}
+
+.recommand-explanation nav {
+  display: flex;
+  justify-content: center;
+}
+
+.recommand-explanation nav h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#recommand-comment {
+  width: auto;
+  height: 3rem;
+}
+
+.recommand-posting section {
+  padding: 0.2rem;
+}
+
+#recommand-submit {
+  padding: 0.2rem;
+  background-color: skyblue;
+}
+
+.recommand p {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#agree {
+  padding: 0.2rem;
+  background-color: pink;
+}
+
+/* contact design */
+.contact-box {
+  text-align:center;
+  border: 1rem solid lightgray;
+  background-color: #f5f5dc;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#contact-content {
+  width: 60%;
+  height: 20rem;
+}
+
+/* news design */
+.news-page {
+  padding: 1rem;
+  margin: 1rem;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.news-header {
+  border: 1px solid gray;
+  background-color: gray;
+}
+
+#news-card {
+  font-family: sans-serif;
+  border: 0.5rem solid skyblue;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: skyblue;
+  color:white;
+  text-align: center;
+}
+
+#news-card section {
+  padding:0;
+  margin:0.5rem;
+}

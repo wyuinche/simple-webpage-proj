@@ -1,0 +1,112 @@
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset="utf-8">
+    <title>Vote for your artist</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- logo -->
+    <div class="fixed-logo">
+      <div class="logo"><img id="logo-pic" src="logo.jpg" alt="logo"></div>
+      <div class="sns">
+        <a href="https://twitter.com/BIG_picture_ct"><img id="twitter" width="auto" height="40" src="twitter.png" alt="twitter"></a>
+        <a href="https://www.youtube.com/channel/UC3wi1en2Zuw5JCglPQV1GmA?view_as=subscriber"><img id="youtube" width="auto" height="30" src="youtube.png" alt="youtube"></a>
+      </div>
+    </div>
+    <!-- menu -->
+    <nav class="menu">
+      <ol class="menu-list">
+        <li> <a href="index.html">HOME</a></li>
+        <li> <a href="COMPANY.html">COMPANY</a></li>
+        <li> <a href="NEWS.html">NEWS</a></li>
+        <li> <a href="BOARD.html">BOARD</a></li>
+        <li> <a href="CONTACT.html">CONTACT</a></li>
+      </ol>
+    </nav>
+
+    <div class='board-page'>
+      <div class='board-menu'>
+        <ul>
+          <li><a href="BOARD.html">Review</a></li>
+          <li><a href="recommand.html">Recommand</a></li>
+        </ul>
+      </div>
+      <div class='recommand-card'>
+        <nav class='recommand-explanation'>
+          <nav>
+            <img src="recommand_exp.png" alt="recommand">
+          </nav>
+          <nav>
+            <h1>Let me know your artist</h1>
+          </nav>
+        </nav>
+        <div class='recommand-posting'>
+          <section>Artist<br><input id='recommand-artist' type="text"></section>
+          <section>Comment<br><input id='recommand-comment' type=" text" name='review'></section>
+          <section><button id='recommand-submit'>Submit</button></section>
+        </div>
+        <div class='recommand'>
+          <h2>Artist A</h2>
+          <p>I really wanna meet him</p>
+          <button id='agree'>Agree</button>
+        </div>
+        <div class='recommand'>
+          <h2>Artist B</h2>
+          <p>There're so many people being fond of her</p>
+          <button id='agree'>Agree</button>
+        </div>
+        <div class='recommand'>
+          <h2>Artist C</h2>
+          <p>HA HA</p>
+          <button id='agree'>Agree</button>
+        </div>
+        <div class='recommand'>
+          <h2>Artist D</h2>
+          <p>Let's go to the stage</p>
+          <button id='agree'>Agree</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $('#recommand-submit').click(function() {
+        var Artist = $('#recommand-artist').val();
+        var Comment = $('#recommand-comment').val();
+        $('.recommand-card').append(
+          '<div>'+
+            '<h2>'+Artist+'</h2>'+
+            '<p>'+Comment+'</p>'+
+            '<p id='+'&#34agree-people&#34'+'>'+'</p>'+
+            '<button>'+'Agree'+'</button></div>'
+          );
+          $('.recommand-card div').addClass('recommand');
+          $('.recommand-card div button').attr('id', 'agree');
+        });
+    // $('#agree').click(function(){
+    //   alert('click');
+    //   var agree_people = $('this').val();
+    //   alert(agree_people);
+    //   agree_people = Number(agree_people);
+    //   agree_people = agree_people + 1;
+    //   $('this').html('Agree '+agree_people);
+    //   $('this').val(agree_people);
+    // });
+    </script>
+
+    <!-- Go to Top Button -->
+    <div id="goto_top">
+        <a href="#"> <img width="100px" height="auto" src="sign.png" alt="top_button"> </a>
+    </div>
+
+    <footer>
+        Big Picture Entertainment<br>
+        XXX, Wausan-ro, Mapo-gu, Seoul, Republic of Korea<br>
+        TEL 02-XXX-XXXX FAX 02-XXX-XXXX <br>
+        info@bigent.com<br>
+        Company Registration # NNN-NN-NNNNN
+        <br><a href="REFERENCE.html">REFERENCES</a>
+    </footer>
+  </body>
+</html>
